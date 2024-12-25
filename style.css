@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+main{
+    background-color: #333;
+    height: 100vh;
+    width: 100%;
+}
+
+.header{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+}
+
+.header i{
+    color: #e2b714;
+    font-size: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+    position: fixed;
+    left: 5vw;
+}
+
+.header p{
+    color: #e2b714;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 20px;
+    position: fixed;
+    left: 8.5vw;
+}
+
+.heading{
+    color: #e2b714;
+    display: flex;
+    justify-content: start;
+    position: absolute;
+    bottom: 18vh;
+    right: 39vw;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 15px;
+}
+
+.heading h1:before{
+    content: "";
+    display: inline-block;
+    background-image: url("media/sonic-run-timboulder.gif");
+    background-size: cover; 
+    height: 40px;
+    width: 55px;
+    position:absolute;
+    margin-left: 9rem;
+    margin-top: -3rem;
+}
+
+.bar{
+    height: 100px;
+    width: 80vw;
+    margin: 0 9vw;
+    position: fixed;
+    top: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+ul li{
+    display: inline-block;
+    font-size: 15px;
+    font-family: 'Roboto Mono', sans-serif;
+    color: #9c9999;
+}
+
+ul li h3{
+    font-size: 13px;
+}
+
+ul li span{
+    color:#e2b714 ;
+    font-size:34px;
+}
+
+
+
+.timer{
+    font-size: 29px;
+} 
+
+.reset{
+    background-color: black;
+    outline: none;
+    border: none;
+    color: rgb(120, 114, 114);
+    height: 20px;
+    width:87px;
+    position: absolute;
+    right: 48.3vw;
+    bottom: 38vh;
+}
+
+.game{
+    display: block;
+    height: 21vh;
+    width: 80vw;
+    position: absolute;
+    top: 34vh;
+    margin-left: 9vw;
+    overflow: hidden;
+    text-align: start;
+    color: rgba(0, 0, 0, 0.695);
+}
+
+div.words,.word{
+    display: inline-block;
+    font-size: 36px;
+    font-family: 'Roboto Mono', sans-serif;
+    margin-left: 15px;
+    top: 0vh;
+    position: relative;
+}
+
+.focus{
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+   background-color: #333333bc;
+    border: 1px solid rgba(255, 255, 255, 0.371);
+    height: 22vh;
+    width: 80vw;
+    position: absolute;
+    top: 33vh;
+    margin-left:9vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.afterFocus{
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+   background-color: #333333bc;
+    border: 1px solid rgba(255, 255, 255, 0.371);
+    height: 22vh;
+    width: 80vw;
+    position: absolute;
+    top: 33vh;
+    margin-left:9vw;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 20px;
+    font-size: 50px;
+}
+
+.letter.correct{
+    color: #e2b714;
+}
+
+.letter.incorrect{
+    color: red;
+}
+
+.extra.letter{
+    color: red;
+}
+
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.cursor{
+    height: 36.4px;
+    width: 0.1rem;
+    background: #e2b714;
+    margin-left: 0px;
+    margin-top: 9px;
+    animation: blink 1.0s infinite;
+    display: none;
+    position: fixed;
+}
+
+/*@media screen and (max-width: 710px){
+    .cursor{
+        margin-left:4.9rem;
+        margin-top: 5.1rem;
+    }
+}
